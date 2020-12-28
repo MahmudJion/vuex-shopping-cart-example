@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <h1 class="my-2">
-      Cart <span class="badge badge-secondary">{{ cartSize }} products</span>
+      Cart
+        <span class="badge badge-secondary">{{ cartSize }} products</span>
     </h1>
     <div v-if="!cartSize" class="alert alert-secondary my-5" role="alert">
       Cart is empty! Please add some products.
