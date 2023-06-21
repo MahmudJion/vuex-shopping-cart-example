@@ -7,8 +7,14 @@ module.exports = {
     'plugin:vue/essential',
     'eslint:recommended'
   ],
+  parser: "@babel/eslint-parser",
   parserOptions: {
-    parser: 'babel-eslint'
+    requireConfigFile: false,
+    babelOptions: {
+      babelrc: false,
+      configFile: false,
+      presets: ["@babel/preset-env"],
+    },
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
